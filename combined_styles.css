@@ -1,0 +1,647 @@
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-family: Arial, sans-serif;
+}
+
+body {
+    margin: 0;
+    padding: 20px;
+    background-color: #f5f5f5;
+}
+
+.container {
+    display: flex;
+    max-width: 1200px;
+    margin: 0 auto;
+    gap: 0;
+    flex-direction: row;
+}
+
+.ratings-panel {
+    background: white;
+    border-radius: 8px;
+    box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+    padding: 20px;
+    flex: 1;
+    position: relative;
+    z-index: 2;
+}
+
+.product-card {
+    background: white;
+    border-radius: 8px;
+    box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+    padding: 20px;
+    padding-left: 40px;
+    flex: 2;
+    margin-left: -20px;
+    position: relative;
+    z-index: 1;
+}
+
+.rating-item {
+    display: flex;
+    align-items: center;
+    margin-bottom: 10px;
+    padding: 0;
+    cursor: pointer;
+    position: relative;
+    overflow: visible;
+    height: 50px;
+}
+
+.rating-content {
+    display: flex;
+    align-items: center;
+    position: relative;
+    width: 100%;
+    height: 100%;
+    padding: 10px;
+    background-color: #f5f5f5;
+    transition: all 0.3s ease;
+    border-radius: 4px;
+    font-weight: 700;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+.rating-item:hover .rating-content {
+    background-color: #4285f4;
+    color: white;
+    width: calc(100% + 40px);
+    margin-right: -40px;
+    clip-path: polygon(0 0, calc(100% - 20px) 0, 100% 50%, calc(100% - 20px) 100%, 0 100%);
+}
+
+.rating-item.selected .rating-content {
+    background-color: #4285f4;
+    color: white;
+    width: calc(100% + 40px);
+    margin-right: -40px;
+    clip-path: polygon(0 0, calc(100% - 20px) 0, 100% 50%, calc(100% - 20px) 100%, 0 100%);
+}
+
+.score {
+    display: inline-block;
+    width: 40px;
+    height: 40px;
+    line-height: 40px;
+    text-align: center;
+    border-radius: 6px;
+    color: white;
+    font-weight: 700;
+    order: 2;
+}
+
+.score-high {
+    background-color: #34a853;
+}
+
+.score-medium {
+    background-color: #fbbc05;
+}
+
+.score-low {
+    background-color: #ea4335;
+}
+
+.rating-name {
+    font-weight: 700;
+    order: 1;
+}
+
+.product-title {
+    display: flex;
+    align-items: center;
+    margin-bottom: 15px;
+    justify-content: center;
+    padding-left: 20px;
+}
+
+.product-title h2 {
+    margin: 0;
+    font-size: 24px;
+}
+
+.title-score {
+    margin-left: 15px;
+}
+
+.product-description {
+    line-height: 1.5;
+    color: #444;
+    margin-bottom: 20px;
+}
+
+.summary-content {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.summary-text {
+    background: white;
+    padding: 20px;
+    border-radius: 4px;
+    line-height: 1.6;
+    color: #333;
+}
+
+.pros-cons-container {
+    display: flex;
+    border: 1px solid #e0e0e0;
+    margin-bottom: 10px;
+}
+
+.pros, .cons {
+    flex: 1;
+    padding: 20px;
+}
+
+/* Add border between pros and cons */
+.pros {
+    border-right: 1px solid #e0e0e0;
+}
+
+/* Remove the gap between pros and cons */
+.pros-cons-container {
+    gap: 0;
+}
+
+/* Adjust the container to remove any border radius */
+.pros, .cons {
+    border-radius: 0;
+    background: white;
+}
+
+.pros h4, .cons h4 {
+    margin-bottom: 15px;
+    text-transform: uppercase;
+    font-size: 16px;
+    color: #020000;
+}
+
+.pros ul, .cons ul {
+    padding-left: 0;
+}
+
+.pros li, .cons li {
+    list-style: none;
+    position: relative;
+    padding-left: 25px;
+    margin-bottom: 10px;
+    line-height: 1.4;
+}
+
+.pros li::before {
+    content: "✓";
+    position: absolute;
+    left: 0;
+    color: #34a853;
+    font-weight: bold;
+}
+
+.cons li::before {
+    content: "✕";
+    position: absolute;
+    left: 0;
+    color: #ea4335;
+    font-weight: bold;
+}
+
+.accordion-container {
+    max-width: 800px;
+    margin: 0 auto;
+    background: white;
+    border-radius: 8px;
+    box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+    padding: 20px;
+}
+
+.heading-container {
+    display: flex;
+    align-items: center;
+    margin-bottom: 20px;
+    gap: 15px;
+}
+
+.accent-line {
+    width: 4px;
+    height: 30px;
+    background-color: #4285f4;
+    border-radius: 2px;
+}
+
+.heading-container h2 {
+    color: #333;
+    font-size: 24px;
+    font-weight: 600;
+    margin: 0;
+}
+
+.accordion-item {
+    margin-bottom: 10px;
+}
+
+.accordion-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 8px 15px;
+    background-color: #f8f9fa;
+    border-radius: 4px;
+    text-decoration: none;
+    color: inherit;
+}
+
+.accordion-header:hover,
+.accordion-header.active {
+    background-color: #4285f4;
+    color: white;
+    border-radius: 4px;
+}
+
+.accordion-header:hover h3,
+.accordion-header.active h3 {
+    color: white;
+}
+
+.accordion-header:hover .accordion-icon,
+.accordion-header.active .accordion-icon {
+    color: white;
+}
+
+.accordion-header h3 {
+    font-weight: bold;
+    font-size: 18px; 
+    color: #333;
+    transition: color 0.3s ease;
+}
+
+.accordion-icon {
+    font-size: 20px; /* Reduced from 24px */
+    color: #666;
+    transition: color 0.3s ease;
+}
+
+.accordion-content {
+    max-height: 0;
+    opacity: 0;
+    overflow: hidden;
+    transition: all 0.3s ease-out;
+}
+
+.accordion-content.active {
+    max-height: 1000px;
+    opacity: 1;
+}
+
+.accordion-item.hover-trigger:hover .accordion-header {
+    background-color: initial;
+}
+
+.accordion-item.hover-trigger:hover .accordion-header h3,
+.accordion-item.hover-trigger:hover .accordion-icon {
+    color: initial;
+}
+
+.accordion-item.hover-trigger:hover .accordion-content {
+    max-height: initial;
+    opacity: initial;
+}
+
+.accordion-header .accordion-icon::after {
+    content: '+';
+}
+
+.accordion-header.active .accordion-icon::after {
+    content: '−';
+}
+
+/* Base styles for all content wrappers */
+.content-wrapper {
+    background: white;
+    padding: 20px 15px;
+}
+
+/* 1. Text and Image layout (original) */
+.text-image-content {
+    display: flex;
+    gap: 20px;
+}
+
+.text-image-content .text-section {
+    flex: 1;
+    padding: 0 15px;
+    border-right: 1px solid #eee;
+}
+
+.text-image-content .picture-section {
+    flex: 1;
+    padding: 0 15px;
+}
+
+/* 2. Two images and text layout */
+.two-images-content {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.two-images-content .images-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 20px;
+}
+
+.two-images-content .text-section {
+    padding: 15px 0;
+}
+
+/* 3. Video and text layout */
+.video-text-content {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.video-text-content .text-section {
+    width: 100%;
+    padding: 0 15px;
+}
+
+.video-text-content .video-section {
+    width: 100%;
+    padding: 0 15px;
+    position: relative;
+    padding-bottom: 56.25%; /* 16:9 Aspect Ratio */
+    height: 0;
+    overflow: hidden;
+}
+
+.video-text-content .video-section iframe {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    border: none;
+    border-radius: 4px;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+}
+
+/* 4. Text only layout */
+.only-text-content {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+/* Common styles for sections */
+.picture-section img,
+.images-grid img {
+    width: 100%;
+    height: auto;
+    border-radius: 4px;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+}
+
+.text-section h3 {
+    margin-bottom: 15px;
+    font-size: 18px;
+    color: #444;
+}
+
+.text-section p {
+    line-height: 1.5;
+    color: #666;
+}
+
+.accordion-header.active {
+    background-color: #4285f4;
+    color: white;
+    border-radius: 4px;
+}
+
+/* Add these styles to your existing CSS */
+.summary-content {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.summary-text {
+    background: white;
+    padding: 20px;
+    border-radius: 4px;
+    line-height: 1.6;
+    color: #333;
+}
+
+.pros-cons-container {
+    display: flex;
+    border: 1px solid #e0e0e0;
+    margin-bottom: 10px; /* Add space below the entire pros-cons container */
+}
+
+.pros, .cons {
+    flex: 1;
+    padding: 20px;
+}
+
+/* Add border between pros and cons */
+.pros {
+    border-right: 1px solid #e0e0e0;
+}
+
+/* Remove the gap between pros and cons */
+.pros-cons-container {
+    gap: 0;
+}
+
+/* Adjust the container to remove any border radius */
+.pros, .cons {
+    border-radius: 0;
+    background: white;
+}
+
+.pros h4, .cons h4 {
+    margin-bottom: 15px;
+    text-transform: uppercase;
+    font-size: 16px;
+    color: #020000;
+}
+
+.pros ul, .cons ul {
+    padding-left: 0;
+}
+
+.pros li, .cons li {
+    list-style: none;
+    position: relative;
+    padding-left: 25px;
+    margin-bottom: 10px;
+    line-height: 1.4;
+}
+
+.pros li::before {
+    content: "✓";
+    position: absolute;
+    left: 0;
+    color: #34a853;
+    font-weight: bold;
+}
+
+.cons li::before {
+    content: "✕";
+    position: absolute;
+    left: 0;
+    color: #ea4335;
+    font-weight: bold;
+}
+
+.comparison-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 20px;
+    padding: 20px;
+}
+
+.comparison-card {
+    background: white;
+    border-radius: 8px;
+    padding: 10px;
+    box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+    display: flex;
+    flex-direction: column;
+}
+
+.card-title {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.card-title h3 {
+    color: #333;
+    font-size: 20px;
+    margin: 0;
+}
+
+.comparison-text {
+    flex-grow: 1;
+    line-height: 1.6;
+    color: #444;
+    margin-bottom: 20px;
+}
+
+.comparison-links {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+
+.compare-link, .review-link {
+    color: #2659af;
+    text-decoration: underline;
+    font-size: 14px;
+    font-weight: 500;
+}
+
+
+
+.price-section {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    margin-top: auto;
+    padding-bottom: 15px; /* Added padding at the bottom */
+}
+
+.see-price {
+    background-color: #35811df1;
+    color: rgb(255, 255, 255);
+    padding: 8px 16px;
+    border-radius: 4px;
+    text-decoration: none;
+    font-weight: bold;
+    font-size: 14px;
+    margin-bottom: 5px; /* Additional spacing below the button */
+}
+
+.store-name {
+    color: #080202;
+    font-size: 14px;
+}
+
+.buy-section {
+    text-align: center;
+}
+.buy-button {
+    display: inline-block;
+    padding: 10px 20px;
+    background-color: #ffffff;
+    color: #4285f4;
+    text-decoration: none;
+    border-radius: 4px;
+    font-weight: bold;
+    margin-right: 15px;
+    margin-bottom: 10px;
+    transition: all 0.3s ease; /* Added smooth transition */
+    border: 2px solid #4285f4;
+}
+
+.buy-button:hover {
+    color: #ffffff;
+    background-color: #000000; /* Darker shade of blue */
+    transform: scale(1.05); /* Slightly increase size */
+    font-weight: 900; /* Make text bolder on hover */
+}
+.store-link {
+    display: inline-block;
+    color: #444;
+    text-decoration: underline;
+    font-weight: 500;
+}
+
+@media (max-width: 768px) {
+    .comparison-grid {
+        grid-template-columns: 1fr;
+    }
+}
+
+/* Add these styles for links */
+a {
+    text-decoration: underline;
+}
+
+/* Update existing link styles to include underline */
+.compare-link, .review-link {
+    color: #2659af;
+    text-decoration: underline;
+    font-size: 14px;
+    font-weight: 500;
+}
+
+.store-link {
+    display: inline-block;
+    color: #444;
+    text-decoration: underline;
+    font-weight: 500;
+}
+
+/* Keep the buy button without underline since it's a button-style link */
+.buy-button {
+    text-decoration: none;
+}
+
+/* Keep accordion header links without underline */
+.accordion-header {
+    text-decoration: none;
+}
+
