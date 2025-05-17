@@ -4,11 +4,12 @@
 /* Affiliate Products Section - Modern Design CSS */
 .aff-products-section {
   font-family: 'Open Sans', 'Roboto', sans-serif;
+  font-size: 17px; /* Default text size set to 17px */
   max-width: 100%;
   margin: 20px auto;
   padding: 15px;
   box-sizing: border-box;
-  border: 1px solid #000; /* Black border as requested */
+  /* Border removed as requested */
   isolation: isolate; /* Isolate this component to prevent style conflicts */
 }
 
@@ -29,7 +30,7 @@
 
 .aff-main-header .aff-header-h4 {
   margin: 0;
-  font-size: 28px;
+  font-size: 24px; /* Increased to be proportional to the new default text size */
   font-weight: 500;
   letter-spacing: 0.2px;
   display: block;
@@ -111,7 +112,7 @@
 .aff-product-header-3 .aff-header-h5,
 .aff-product-header-4 .aff-header-h5 {
   margin: 0;
-  font-size: 16px;
+  font-size: 20px; /* Increased to be proportional to the new default text size */
   font-weight: 500;
   letter-spacing: 0.2px;
   display: block;
@@ -153,7 +154,7 @@
   text-align: center;
   border-radius: 4px;
   font-weight: 400;
-  font-size: 14px;
+  font-size: 17px; /* Updated to match default text size */
   letter-spacing: 0.1px;
 }
 
@@ -171,7 +172,7 @@
   margin: 15px 10px;
   text-align: center;
   color: #616161;
-  font-size: 14px;
+  font-size: 17px; /* Updated to match default text size */
   line-height: 1.4;
   letter-spacing: 0.1px;
   font-weight: 400;
@@ -194,7 +195,7 @@
   text-decoration: none;
   border-radius: 6px;
   font-weight: 500;
-  font-size: 15px;
+  font-size: 17px; /* Updated to match default text size */
   letter-spacing: 0.2px;
   transition: all 0.3s ease;
   text-align: center;
@@ -205,7 +206,7 @@
 .aff-cta-button:hover {
   background-color: #1565c0;
   text-decoration: underline;
-  font-size: 16px;
+  font-size: 19px; /* Slightly larger than the default 17px */
   transform: scale(1.05);
   transition: all 0.3s ease;
 }
@@ -214,6 +215,9 @@
 .aff-products-section a:hover {
   text-decoration: underline;
   font-size: larger;
+  font-weight: bold;
+  color: white;
+  background-color: #1565c0;
   transition: all 0.3s ease;
 }
 
@@ -228,6 +232,8 @@
   text-decoration: underline;
   font-size: larger;
   font-weight: bold;
+  color: white;
+  background-color: #1565c0;
 }
 
 /* Ensure these hover styles don't affect links outside this component */
