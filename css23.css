@@ -1,182 +1,204 @@
-/* Affiliate Products Section Styles */
+/* Import Google Font - Open Sans */
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;500;600&display=swap');
+
+/* Affiliate Products Section - Modern Design CSS */
 .aff-products-section {
-    font-family: 'Nunito', sans-serif;
-    color: #1E293B;
-    font-size: 1.125rem;
-    line-height: 1.5;
-    letter-spacing: 0.02em;
+  font-family: 'Open Sans', 'Roboto', sans-serif;
+  max-width: 100%;
+  margin: 20px auto;
+  padding: 15px;
+  box-sizing: border-box;
+  border: 1px solid #000; /* Black border as requested */
 }
 
-/* Container */
-.aff-products-section .aff-container {
-    max-width: 72rem; /* 6xl = 72rem */
-    margin-left: auto;
-    margin-right: auto;
-    padding: 0.5rem;
+.aff-container {
+  width: 100%;
+  max-width: 1200px;
+  margin: 0 auto;
 }
 
-/* Main Header */
-.aff-products-section .aff-main-header {
-    background: linear-gradient(to right, #6366F1, #8B5CF6, #EC4899);
-    color: white;
-    border-left: 4px solid #6366F1;
-    text-align: center;
-    padding-top: 0.75rem;
-    padding-bottom: 0.75rem;
-    margin-bottom: 1rem;
-    border-radius: 0.5rem;
-    box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.04);
+.aff-main-header {
+  background: linear-gradient(90deg, #6a5af9 0%, #e93a9a 100%);
+  color: white;
+  text-align: center;
+  padding: 15px;
+  margin-bottom: 20px;
+  border-radius: 8px;
 }
 
-.aff-products-section .aff-main-header h4 {
-    font-size: 1.875rem;
-    font-weight: 800;
-    letter-spacing: 0.05em;
-    margin: 0;
+.aff-main-header h4 {
+  margin: 0;
+  font-size: 28px;
+  font-weight: 500;
+  letter-spacing: 0.2px;
 }
 
-/* Products Grid */
-.aff-products-section .aff-products-grid {
-    display: grid;
+.aff-products-grid {
+  display: grid;
+  grid-template-columns: repeat(1, 1fr);
+  gap: 20px;
+  width: 100%;
+}
+
+/* Responsive grid layout based on available space */
+@media (min-width: 300px) {
+  .aff-products-grid {
+    grid-template-columns: repeat(1, 1fr);
+  }
+}
+
+@media (min-width: 301px) and (max-width: 550px) {
+  .aff-products-grid {
     grid-template-columns: repeat(2, 1fr);
-    gap: 0.75rem;
-    padding-left: 1rem;
-    padding-right: 1rem;
-    grid-auto-rows: 1fr;
+  }
 }
 
-@media (min-width: 640px) {
-    .aff-products-section .aff-products-grid {
-        grid-template-columns: repeat(4, 1fr);
-        padding-left: 10px;
-        padding-right: 10px;
-    }
+@media (min-width: 551px) {
+  .aff-products-grid {
+    grid-template-columns: repeat(4, 1fr);
+  }
 }
 
-/* Product Card */
-.aff-products-section .aff-product-card {
-    background-color: white;
-    border-radius: 0.5rem;
-    box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
-    overflow: hidden;
-    display: flex;
-    flex-direction: column;
-    height: 100%;
+.aff-product-card {
+  border: 1px solid #e0e0e0;
+  border-radius: 8px;
+  overflow: hidden;
+  background-color: #fff;
+  box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  display: flex;
+  flex-direction: column;
+  height: 100%;
 }
 
-/* Product Headers */
-.aff-products-section .aff-product-header-1 {
-    background: linear-gradient(to right, #F59E0B, #F97316);
-    font-weight: 700;
-    letter-spacing: 0.05em;
-    color: white;
-    padding: 0.75rem;
-    text-align: center;
+.aff-product-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 5px 15px rgba(0,0,0,0.15);
 }
 
-.aff-products-section .aff-product-header-2 {
-    background: linear-gradient(to right, #059669, #10B981);
-    font-weight: 700;
-    letter-spacing: 0.05em;
-    color: white;
-    padding: 0.75rem;
-    text-align: center;
+.aff-product-header-1 {
+  background-color: #ff9800;
+  color: white;
+  padding: 12px;
+  text-align: center;
 }
 
-.aff-products-section .aff-product-header-3 {
-    background: linear-gradient(to right, #DC2626, #EF4444);
-    font-weight: 700;
-    letter-spacing: 0.05em;
-    color: white;
-    padding: 0.75rem;
-    text-align: center;
+.aff-product-header-2 {
+  background-color: #4caf50;
+  color: white;
+  padding: 12px;
+  text-align: center;
 }
 
-.aff-products-section .aff-product-header-4 {
-    background: linear-gradient(to right, #0891B2, #22D3EE);
-    font-weight: 700;
-    letter-spacing: 0.05em;
-    color: white;
-    padding: 0.75rem;
-    text-align: center;
+.aff-product-header-3 {
+  background-color: #f44336;
+  color: white;
+  padding: 12px;
+  text-align: center;
 }
 
-.aff-products-section .aff-product-header-1 h5,
-.aff-products-section .aff-product-header-2 h5,
-.aff-products-section .aff-product-header-3 h5,
-.aff-products-section .aff-product-header-4 h5 {
-    font-weight: 800;
-    font-size: 1.125rem;
-    letter-spacing: 0.05em;
-    margin: 0;
+.aff-product-header-4 {
+  background-color: #00bcd4;
+  color: white;
+  padding: 12px;
+  text-align: center;
 }
 
-/* Product Content */
-.aff-products-section .aff-product-content {
-    padding: 0.5rem;
-    display: flex;
-    flex-direction: column;
-    flex-grow: 1;
+.aff-product-header-1 h5,
+.aff-product-header-2 h5,
+.aff-product-header-3 h5,
+.aff-product-header-4 h5 {
+  margin: 0;
+  font-size: 16px;
+  font-weight: 500;
+  letter-spacing: 0.2px;
 }
 
-.aff-products-section .aff-product-image {
-    width: 100%;
-    height: 12rem;
-    object-fit: contain;
+.aff-product-content {
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+  flex-grow: 1;
 }
 
-/* Feature Items */
-.aff-products-section .aff-feature-blue {
-    background-color: #e3f0fc;
-    padding: 0.5rem;
-    margin-top: 0.375rem;
-    margin-bottom: 0.375rem;
-    border-radius: 0.25rem;
-    font-size: 1rem;
-    font-weight: 600;
+.aff-product-image-container {
+  padding: 15px;
+  background-color: #fff;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 180px;
 }
 
-.aff-products-section .aff-feature-yellow {
-    background-color: #fdf6e3;
-    padding: 0.5rem;
-    margin-top: 0.375rem;
-    margin-bottom: 0.375rem;
-    border-radius: 0.25rem;
-    font-size: 1rem;
-    font-weight: 600;
+.aff-product-image {
+  max-width: 100%;
+  max-height: 150px;
+  object-fit: contain;
 }
 
-.aff-products-section .aff-product-description {
-    color: #1E293B;
-    margin-top: 0.5rem;
-    margin-bottom: 0.5rem;
-    font-size: 1rem;
+.aff-features-container {
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+  padding: 0 10px;
 }
 
-/* Button Container */
-.aff-products-section .aff-button-container {
-    margin-top: auto;
-    padding-top: 0.75rem;
+.aff-feature-blue,
+.aff-feature-yellow {
+  width: 100%;
+  padding: 8px;
+  text-align: center;
+  border-radius: 4px;
+  font-weight: 400;
+  font-size: 14px;
+  letter-spacing: 0.1px;
 }
 
-/* CTA Button */
-.aff-products-section .aff-cta-button {
-    display: block;
-    background-color: #1e40af;
-    color: white;
-    text-align: center;
-    font-weight: 800;
-    padding-top: 0.5rem;
-    padding-bottom: 0.5rem;
-    border-radius: 0.5rem;
-    font-size: 1rem;
-    letter-spacing: 0.05em;
-    text-decoration: none;
-    transition: all 0.3s ease;
+.aff-feature-blue {
+  background-color: #e6f3ff;
+  color: #0066cc;
 }
 
-.aff-products-section .aff-cta-button:hover {
-    background-color: #3B82F6;
-    transform: scale(1.05);
-    box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05);
+.aff-feature-yellow {
+  background-color: #fff8e6;
+  color: #996600;
+}
+
+.aff-product-description {
+  margin: 15px 10px;
+  text-align: center;
+  color: #616161;
+  font-size: 14px;
+  line-height: 1.4;
+  letter-spacing: 0.1px;
+  font-weight: 400;
+  flex-grow: 1;
+}
+
+.aff-button-container {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  padding: 15px;
+  margin-top: auto;
+}
+
+.aff-cta-button {
+  display: inline-block;
+  background-color: #1976d2;
+  color: white;
+  padding: 12px 20px;
+  text-decoration: none;
+  border-radius: 6px;
+  font-weight: 500;
+  font-size: 15px;
+  letter-spacing: 0.2px;
+  transition: background-color 0.3s ease;
+  text-align: center;
+  width: 100%;
+  box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+}
+
+.aff-cta-button:hover {
+  background-color: #1565c0;
 }
