@@ -9,6 +9,7 @@
   padding: 15px;
   box-sizing: border-box;
   border: 1px solid #000; /* Black border as requested */
+  isolation: isolate; /* Isolate this component to prevent style conflicts */
 }
 
 .aff-container {
@@ -26,11 +27,12 @@
   border-radius: 8px;
 }
 
-.aff-main-header h4 {
+.aff-main-header .aff-header-h4 {
   margin: 0;
   font-size: 28px;
   font-weight: 500;
   letter-spacing: 0.2px;
+  display: block;
 }
 
 .aff-products-grid {
@@ -104,14 +106,15 @@
   text-align: center;
 }
 
-.aff-product-header-1 h5,
-.aff-product-header-2 h5,
-.aff-product-header-3 h5,
-.aff-product-header-4 h5 {
+.aff-product-header-1 .aff-header-h5,
+.aff-product-header-2 .aff-header-h5,
+.aff-product-header-3 .aff-header-h5,
+.aff-product-header-4 .aff-header-h5 {
   margin: 0;
   font-size: 16px;
   font-weight: 500;
   letter-spacing: 0.2px;
+  display: block;
 }
 
 .aff-product-content {
@@ -193,7 +196,7 @@
   font-weight: 500;
   font-size: 15px;
   letter-spacing: 0.2px;
-  transition: background-color 0.3s ease;
+  transition: all 0.3s ease;
   text-align: center;
   width: 100%;
   box-shadow: 0 2px 4px rgba(0,0,0,0.1);
@@ -201,4 +204,31 @@
 
 .aff-cta-button:hover {
   background-color: #1565c0;
+  text-decoration: underline;
+  font-size: 16px;
+  transform: scale(1.05);
+  transition: all 0.3s ease;
 }
+
+/* Ensure all links in the affiliate section have a unique hover effect */
+.aff-products-section a:hover {
+  text-decoration: underline;
+  font-size: larger;
+  transition: all 0.3s ease;
+}
+
+/* Class for other links in the affiliate section */
+.aff-link {
+  color: #1976d2;
+  text-decoration: none;
+  transition: all 0.3s ease;
+}
+
+.aff-link:hover {
+  text-decoration: underline;
+  font-size: larger;
+  font-weight: bold;
+}
+
+/* Ensure these hover styles don't affect links outside this component */
+/* The isolation property is already set in the main .aff-products-section class */
