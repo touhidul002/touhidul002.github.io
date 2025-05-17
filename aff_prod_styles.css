@@ -1,0 +1,182 @@
+/* Affiliate Products Section Styles */
+.aff-products-section {
+    font-family: 'Nunito', sans-serif;
+    color: #1E293B;
+    font-size: 1.125rem;
+    line-height: 1.5;
+    letter-spacing: 0.02em;
+}
+
+/* Container */
+.aff-products-section .aff-container {
+    max-width: 72rem; /* 6xl = 72rem */
+    margin-left: auto;
+    margin-right: auto;
+    padding: 0.5rem;
+}
+
+/* Main Header */
+.aff-products-section .aff-main-header {
+    background: linear-gradient(to right, #6366F1, #8B5CF6, #EC4899);
+    color: white;
+    border-left: 4px solid #6366F1;
+    text-align: center;
+    padding-top: 0.75rem;
+    padding-bottom: 0.75rem;
+    margin-bottom: 1rem;
+    border-radius: 0.5rem;
+    box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.04);
+}
+
+.aff-products-section .aff-main-header h4 {
+    font-size: 1.875rem;
+    font-weight: 800;
+    letter-spacing: 0.05em;
+    margin: 0;
+}
+
+/* Products Grid */
+.aff-products-section .aff-products-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 0.75rem;
+    padding-left: 1rem;
+    padding-right: 1rem;
+    grid-auto-rows: 1fr;
+}
+
+@media (min-width: 640px) {
+    .aff-products-section .aff-products-grid {
+        grid-template-columns: repeat(4, 1fr);
+        padding-left: 10px;
+        padding-right: 10px;
+    }
+}
+
+/* Product Card */
+.aff-products-section .aff-product-card {
+    background-color: white;
+    border-radius: 0.5rem;
+    box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+}
+
+/* Product Headers */
+.aff-products-section .aff-product-header-1 {
+    background: linear-gradient(to right, #F59E0B, #F97316);
+    font-weight: 700;
+    letter-spacing: 0.05em;
+    color: white;
+    padding: 0.75rem;
+    text-align: center;
+}
+
+.aff-products-section .aff-product-header-2 {
+    background: linear-gradient(to right, #059669, #10B981);
+    font-weight: 700;
+    letter-spacing: 0.05em;
+    color: white;
+    padding: 0.75rem;
+    text-align: center;
+}
+
+.aff-products-section .aff-product-header-3 {
+    background: linear-gradient(to right, #DC2626, #EF4444);
+    font-weight: 700;
+    letter-spacing: 0.05em;
+    color: white;
+    padding: 0.75rem;
+    text-align: center;
+}
+
+.aff-products-section .aff-product-header-4 {
+    background: linear-gradient(to right, #0891B2, #22D3EE);
+    font-weight: 700;
+    letter-spacing: 0.05em;
+    color: white;
+    padding: 0.75rem;
+    text-align: center;
+}
+
+.aff-products-section .aff-product-header-1 h5,
+.aff-products-section .aff-product-header-2 h5,
+.aff-products-section .aff-product-header-3 h5,
+.aff-products-section .aff-product-header-4 h5 {
+    font-weight: 800;
+    font-size: 1.125rem;
+    letter-spacing: 0.05em;
+    margin: 0;
+}
+
+/* Product Content */
+.aff-products-section .aff-product-content {
+    padding: 0.5rem;
+    display: flex;
+    flex-direction: column;
+    flex-grow: 1;
+}
+
+.aff-products-section .aff-product-image {
+    width: 100%;
+    height: 12rem;
+    object-fit: contain;
+}
+
+/* Feature Items */
+.aff-products-section .aff-feature-blue {
+    background-color: #e3f0fc;
+    padding: 0.5rem;
+    margin-top: 0.375rem;
+    margin-bottom: 0.375rem;
+    border-radius: 0.25rem;
+    font-size: 1rem;
+    font-weight: 600;
+}
+
+.aff-products-section .aff-feature-yellow {
+    background-color: #fdf6e3;
+    padding: 0.5rem;
+    margin-top: 0.375rem;
+    margin-bottom: 0.375rem;
+    border-radius: 0.25rem;
+    font-size: 1rem;
+    font-weight: 600;
+}
+
+.aff-products-section .aff-product-description {
+    color: #1E293B;
+    margin-top: 0.5rem;
+    margin-bottom: 0.5rem;
+    font-size: 1rem;
+}
+
+/* Button Container */
+.aff-products-section .aff-button-container {
+    margin-top: auto;
+    padding-top: 0.75rem;
+}
+
+/* CTA Button */
+.aff-products-section .aff-cta-button {
+    display: block;
+    background-color: #1e40af;
+    color: white;
+    text-align: center;
+    font-weight: 800;
+    padding-top: 0.5rem;
+    padding-bottom: 0.5rem;
+    border-radius: 0.5rem;
+    font-size: 1rem;
+    letter-spacing: 0.05em;
+    text-decoration: none;
+    transition: all 0.3s ease;
+}
+
+.aff-products-section .aff-cta-button:hover {
+    background-color: #3B82F6;
+    transform: scale(1.05);
+    box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05);
+}
