@@ -59,6 +59,10 @@
 @media (min-width: 551px) {
   .aff-products-grid {
     grid-template-columns: repeat(4, 1fr);
+}
+  .aff-center-products {
+    justify-content: center;
+  }
   }
 }
 
