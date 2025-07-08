@@ -5,7 +5,7 @@
 }
 
 .prime-day-container {
-    max-width: 800px;
+    max-width: 700px;
     margin: 20px auto;
     padding: 20px;
     background: linear-gradient(135deg, #0f6288, #1ef7b6);
@@ -60,7 +60,7 @@
 
 .product-image {
     width: 120px;
-    height: 120px;
+    height: 180px;
     object-fit: contain;
     border-radius: 10px;
     margin-right: 20px;
@@ -144,7 +144,7 @@
 }
 
 .expand-row {
-    background: linear-gradient(45deg, #9b59b6, #8e44ad);
+    background: linear-gradient(45deg, #b16f24, #d87523);
     color: white;
     text-align: center;
     padding: 15px;
@@ -159,7 +159,7 @@
 }
 
 .expand-row:hover {
-    background: linear-gradient(45deg, #8e44ad, #9b59b6);
+    background: linear-gradient(45deg, #eb9d45, #c97734);
     transform: scale(1.02);
 }
 
